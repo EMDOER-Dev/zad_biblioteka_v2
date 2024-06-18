@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj Książkę</title>
+</head>
+<body>
+    <h1>Dodaj Książkę</h1>
+    <form action="{{ url_for('add_book') }}" method="post">
+        <label for="title">Tytuł:</label>
+        <input type="text" name="title" id="title" required>
+        <br>
+        <label for="author">Autor:</label>
+        <select name="author_id" id="author" required>
+            {% for author in authors %}
+                <option value="{{ author.id }}">{{ author.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="year">Rok:</label>
+        <input type="number" name="year" id="year" required>
+        <br>
+        <label for="status">Status:</label>
+        <select name="status" id="status">
+            <option value="available">Na półce</option>
+            <option value="borrowed">Wypożyczona</option>
+        </select>
+        <br>
+        <button type="submit">Dodaj Książkę</button>
+    </form>
+    <a href="{{ url_for('index') }}">Wróć do strony głównej</a>
+</body>
+</html>

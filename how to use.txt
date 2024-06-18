@@ -1,0 +1,5 @@
+Biblioteka - wyswietla wszystkie ksiazki (wypozyczone i nie) + ich autorow
+mozna kliknac w autora aby zobaczyc jego wszystkie ksiazki
+Dodaj książkę - pozwala dodac ksiazke do bazy danych (jeli w bibliotece nie ma jeszcze autora trzeba go dodac najpierw, poniewaz przy dodawaniu ksiazki trzeba wybrac autora z listy dostepnych)
+Dodaj autora - pozwala dodac autora do bazy danych
+Edytuj - pozwala usunac dana ksiazke/danego autora (jesli do autora przypisana jest jakas ksiazka trzeba ja usunac najpierw)

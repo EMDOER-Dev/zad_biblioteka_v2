@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domowa Biblioteka</title>
+</head>
+<body>
+    <h1>Witamy w Domowej Bibliotece!</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('library') }}">Biblioteka</a></li>
+            <li><a href="{{ url_for('add_book') }}">Dodaj Książkę</a></li>
+            <li><a href="{{ url_for('add_author') }}">Dodaj Autora</a></li>
+            <li><a href="{{ url_for('edit') }}">Edytuj</a></li>
+        </ul>
+    </nav>
+    <p>To jest aplikacja do zarządzania Twoimi książkami.</p>
+</body>
+</html>

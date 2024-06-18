@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Książki autora</title>
+</head>
+<body>
+    <h1>Książki autora {{ author.name }}</h1>
+    <ul>
+        {% for book in books %}
+            <li>
+                <strong>{{ book.title }}</strong> - {{ book.year }} - {% if book.status == 'available' %}Na półce{% else %}Wypożyczona{% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('library') }}">Wróć do biblioteki</a>
+</body>
+</html>
